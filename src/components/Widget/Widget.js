@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import Post from '../Post/Post';
 
 class Widget extends React.Component {
@@ -23,5 +23,16 @@ class Widget extends React.Component {
     clearInterval(this.interval);
   }
 }
+
+Widget.propTypes = {
+  feedUrl: PropTypes.string,
+  maxPost: PropTypes.number,
+  intervalSeg: PropTypes.number,
+};
+Widget.defaultProps = {
+  feedUrl: 'http://api.massrelevance.com/MassRelDemo/kindle.json',
+  maxPost: 5,
+  intervalSeg: 30
+};
 
 export default Widget;

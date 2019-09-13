@@ -2,11 +2,13 @@ import React from 'react';
 import moment from 'moment';
 
 const Post = (props) => {
+  const { id, user, created_at, text } = props.p;
+  const { name } = user;
   return (
-    <div className='frame' key={props.p.id}>
-      <h2>{props.p.user.name}</h2>
-      <p className='date'>{moment(props.p.created_at).format('DD/MM/YYYY HH:MM')}</p>
-      <p>{props.p.text}</p>
+    <div className='frame' key={id}>
+      <h2>{name}</h2>
+      <p className='date'>{moment(created_at).format('DD/MM/YYYY HH:MM')}</p>
+      <p>{text}</p>
     </div>
   );
 }
