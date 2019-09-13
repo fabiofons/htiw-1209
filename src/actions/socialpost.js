@@ -10,3 +10,4 @@ export const getSocialPost = (url, size) => dispatch => fetch(url)
       payload: data.splice(0, size)
     });
   });
+  

@@ -5,8 +5,8 @@ import './App.css';
 function App() {
   return (
     <div className='container'>
-      <h1>Widget for Ideaware</h1>
-      <Widget feedUrl='http://api.massrelevance.com/MassRelDemo/kindle.json' maxPost={5} intervalSeg={15} />
+      <h1>POSTS</h1>
+      <Widget feedUrl='http://api.massrelevance.com/MassRelDemo/kindle.json' maxPost={9} intervalSeg={15} />
     </div>
   );
 }

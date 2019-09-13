@@ -4,7 +4,6 @@ import Post from '../Post/Post';
 
 class Widget extends React.Component {
   render() {
-    console.warn(this.props)
     return (
       <div>
         {this.props.posts.map(post => <Post key={post.id} p={post}/>)}
